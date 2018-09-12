@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family:'微软雅黑';
+		}
+		.container {
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.mid_bg{
+			/* width:1920px;
+			height:2211px; */
+			background: url('images/mid.png') no-repeat center top /cover;
+			padding-bottom: 30px;
+		}
+		.mid_logo{
+			/* margin-left:460px; */
+			padding-top: 20px;
+			cursor:pointer;
+		}
+		.mid_text_wrap{
+			width: 970px;
+			position:relative;
+			margin:480px auto 0;
+		}
+		.mid_text{
+			width:100%;
+			position:absolute;
+			top: 4px;
+			text-align:center;
+			font-size:14px;
+		}
+		.mid_text p{
+			margin:0;
+			color: white;
+		}
+		.mid_text p:first-child{
+			margin:18px 0px 8px 0px;
+		}
+		.mid_title1{
+			/* width: 543px; */
+			/* position:relative; */
+			margin:70px auto 0;
+			text-align: center;
+		}
+		.mid_title-text{
+			/* position:absolute; */
+			/* top: 51px; */
+			margin:0 auto;
+			font-size:30px;
+			width: 543px;
+			height: 98px;
+			color:white;
+			text-align:center;
+			padding-top: 51px;
+			line-height: 38px;
+			background: url(images/deng1.png) no-repeat center top;
+		}
+		.mid_title_text2{
+			color: #f9e2b3;
+			text-align:center;
+			font-size: 16px;
+			margin-top: 24px;
+		}
+		.mid_yb{
+			/* margin:42px 477px 0; */
+			display: flex;
+			margin-top: 40px;
+		}
+		.mid_yb > div{
+			width:275px;
+			height: 253px;
+		}
+		.mid_one{
+			background:url('images/yuebingnew1.png') no-repeat;
+		}
+		.mid_font{
+			background:url('images/yuebingnew2.png') no-repeat;
+			margin-left: 75px;
+			color: #893a1e;
+		}
+		.mid_two{
+			font-size: 24px;
+		}
+		.mid_two .mid_gjz{
+			position:relative;
+			top:88px;
+			left:72px;
+		}
+		.mid_two .mid_gjz > div:last-child{
+			font-weight:bolder;
+			margin-top: 12px;
+		}
+		.mid_three{
+			font-size: 30px;
+		}
+		.mid_three .mid_syb{
+			position:relative;
+			top:88px;
+			right:2px;
+			text-align:center;
+			font-weight:bolder;
+		}
+		.mid_lc{
+			padding-top: 22px;
+			/* text-align: center; */
+			/* margin:0 475px; */
+			display: flex;
+		}
+		.mid_lc>div{
+			position:relative;
+			font-size:14px;
+		}
+		.mid_lc>div:nth-child(2){
+			left: 80px;
+		}
+		.mid_lc>div:last-child{
+			left: 140px;
+		}
+		.mid_lc>div>div{
+			margin-left: 30px;
+			color: white;
+		}
+		.mid_lc>div>span{
+			position:absolute;
+			left:0;
+			width: 20px;
+			height: 20px;
+			border-radius:20px;
+			background: #aed2e6;
+			color: #0c2a63;
+			text-align:center;
+			line-height:20px;
+			font-weight:bolder;
+			top: 3px;
+		}
+		.mid_phone{
+			width: 788px;
+			margin: 90px auto 0; 
+			position:relative;
+		}
+		.mid_phone_call{
+			font-size: 30px;
+			color: white;
+			position:absolute;
+			top: 45px;
+			text-align:center;
+			width: 788px;
+		}
+		.mid_miss{
+			margin-top: 20px;
+			text-align: center;
+			color: white;
+			font-size: 16px;
+		}
+		.mid_active{
+			width: 945px;
+			margin: 42px auto 0;
+			display: flex;
+			justify-content: space-between;
+		}
+		.mid_active > div{
+			display:inline-block;
+			/* position:relative; */
+			color: white;
+			font-size: 14px;
+			width: 277px;
+			height: 396px;
+			background: url(images/huodong.png) no-repeat center top;
+		}
+		/* .mid_active > div:not(:first-child){
+			margin-left: 52px;
+		} */
+		.mid_active_one{
+			/* position:absolute; */
+			/* top: 38px;
+			left: 64px; */
+			margin-top: 38px;
+			text-align: center;
+		}
+		.mid_active_one> span:first-child{
+			font:bolder 36px "HelveticaNeue";
+		}
+		.mid_active_one> span:last-child{
+			font:18px "HelveticaNeue";
+		}
+		.mid_active_two{
+			/* position:absolute; */
+			/* top: 112px;
+			left: 56px; */
+			margin-top: 30px;
+			padding-left: 56px;
+		}
+		.mid_active_two .mid_thr{
+			text-decoration:line-through;
+		}
+		.mid_active_two .mid_yh{
+			font-size: 30px;
+		}
+		.mid_active_two .mid_top{
+			margin-top: 22px;
+		}
+		.mid_active_two .mid_wx{
+			margin-top: 18px;
+			font-size: 24px;
+			color: #ef9c49;
+		}
+		.mid_active_two .mid_bd{
+			margin-top: 2px;
+			font-size: 16px;
+			color: #ef9c49;
+		}
+		.mid_btn{
+			margin: 65px auto 0;
+			/* width:280px; */
+			/* height:72px; */
+			/* position:relative;
+			cursor:pointer; */
+			text-align: center;
+		}
+		.mid_btn a {
+			display: inline-block;
+			width: 280px;
+			height: 72px;
+			background: url(images/xiangqing.png) no-repeat center center;
+			text-align: center;
+			color: #fff;
+			text-decoration: none;
+			line-height:72px;
+			font-size: 18px;
+		}
+		.mid_xq{
+			font-size: 18px;
+			color: white;
+			position:absolute;
+			top: 26px;
+			width: 280px;
+			text-align:center;
+		}
+		.mid_foot{
+			margin-top: 130px;
+			/* margin-right:488px; */
+			font-size: 16px;
+			text-align: right;
+			color: #4893cd;
+		}
+	</style>
+</head>
+<body>
+	<div class="mid_bg">
+		<div class="container">
+			<div class="mid_logo">
+				<a href="#"><img src="images/logo.png" alt=""></a>
+			</div>
+			<div class="mid_text_wrap">
+				<img src="images/topnew.png" alt="">
+				<div class="mid_text">
+					<p>以往的中秋节，总会和家里人一起吃顿饭，喝喝茶，再吃一块月饼</p>
+					<p>今年的中秋节，月亮依旧正圆，可此刻在英国的你，身边也许少了家人的陪伴</p>
+				</div>
+			</div>
+			<div class="mid_title1">
+				<!-- <img src="images/deng1.png" alt=""> -->
+				<div class="mid_title-text">中秋节福利</div>
+				<div class="mid_title_text2">
+					中国电信CTExcel给每一位在英国的小伙伴送中秋祝福，还赠送月饼！
+				</div>
+			</div>
+			<div class="mid_yb">
+				<div class="mid_one"></div>
+				<div class="mid_two mid_font">
+					<div class="mid_gjz">
+						<div>回复关键词</div>
+						<div>【中秋节】</div>
+					</div>
+				</div>
+				<div class="mid_three mid_font">
+					<div class="mid_syb">
+						<div>免费寄送</div>
+						<div>月饼</div>
+					</div>
+				</div>
+			</div>
+			<div class="mid_lc">
+				<div>
+					<span>1</span>
+					<div>关注【中国电信欧洲】微信服务号</div>
+				</div>
+				<div>
+					<span>2</span>
+					<div>
+						<div>在对话框回复关键字【中秋节】，打开文章</div>
+						<div>并在文章下方评论区留下你想对家人说的话</div>
+					</div>
+				</div>
+				<div>
+					<span>3</span>
+					<div>
+						<div>我们将会在中秋节前一周，在所有收集到的</div>
+						<div>留言中选出20位，为这20位小伙伴免费寄送</div>
+						<div>一盒月饼！</div>
+					</div>
+				</div>
+			</div>
+			<div class="mid_phone">
+				<img src="images/deng2.png" alt="">
+				<div class="mid_phone_call">中秋节，别忘了给爸妈打个电话</div>
+			</div>
+			<div class="mid_miss">听听一万公里以外，最熟悉的声音。</div>
+			<div class="mid_active">
+				<div>
+					<!-- <img src="images/huodong.png" alt=""> -->
+					<div class="mid_active_one">
+						<span>£11.9</span>
+						<span>/30天</span>
+					</div>
+					<div class="mid_active_two">
+						<div>
+							<span class="mid_thr">4GB</span>
+							<span class="mid_yh">10GB</span>
+							<span>英国流量</span>
+						</div>
+						<div>(4GB可在欧洲使用)</div>
+						<div class="mid_top">
+							<div class="mid_thr">1000分钟</div>
+							<div>2000分钟 英国本地通话</div>
+						</div>
+						<div>
+							<div class="mid_wx">无限</div>
+							<div class="mid_bd">拨打中国（含港澳）</div>
+						</div>
+						<div class="mid_top">
+							<div>无限</div>
+							<div>英国本地短信</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- <img src="images/huodong.png" alt=""> -->
+					<div class="mid_active_one">
+						<span>£14.9</span>
+						<span>/30天</span>
+					</div>
+					<div class="mid_active_two">
+						<div>
+							<span class="mid_thr">6GB</span>
+							<span class="mid_yh">15GB</span>
+							<span>英国流量</span>
+						</div>
+						<div>(5GB可在欧洲使用)</div>
+						<div class="mid_top">
+							<div class="mid_thr">1000分钟</div>
+							<div>2000分钟 英国本地通话</div>
+						</div>
+						<div>
+							<div class="mid_wx">无限</div>
+							<div class="mid_bd">拨打中国（含港澳）</div>
+						</div>
+						<div class="mid_top">
+							<div>无限</div>
+							<div>英国本地短信</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<!-- <img src="images/huodong.png" alt=""> -->
+					<div class="mid_active_one">
+						<span>£19.9</span>
+						<span>/30天</span>
+					</div>
+					<div class="mid_active_two">
+						<div>
+							<span class="mid_thr">8GB</span>
+							<span class="mid_yh">20GB</span>
+							<span>英国流量</span>
+						</div>
+						<div>(6.5GB可在欧洲使用)</div>
+						<div class="mid_top">
+							<div>无限</div>
+							<div>英国本地通话</div>
+						</div>
+						<div>
+							<div class="mid_wx">无限</div>
+							<div class="mid_bd">拨打中国（含港澳）</div>
+						</div>
+						<div class="mid_top">
+							<div>无限</div>
+							<div>英国本地短信</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="mid_btn">
+					<!-- <img src="images/xiangqing.png" alt="">
+					<div class="mid_xq">活动详情</div> -->
+					<a href="#">活动详情</a>
+				</div>
+			</div>
+			<div class="mid_foot">
+				*活动最终解释权归中国电信欧洲公司所有
+			</div>
+		</div>
+	</div>
+</html>
